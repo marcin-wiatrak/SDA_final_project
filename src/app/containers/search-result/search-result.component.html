@@ -1,0 +1,5 @@
+<div *ngIf="(filteredProducts$ | async) as filteredProducts">
+    <app-product *ngFor="let product of filteredProducts" [product]="product" (onAddToCart)="onAddToCart($event)">
+    </app-product>
+
+</div>

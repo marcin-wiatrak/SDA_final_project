@@ -1,0 +1,6 @@
+<div *ngIf="product else loading">
+    {{ product.title }}
+</div>
+<ng-template #loading>
+    Loading...
+</ng-template>

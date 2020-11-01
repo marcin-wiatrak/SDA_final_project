@@ -1,0 +1,15 @@
+<div class="card card-width">
+  <img class="card-img-top" [src]="product.image" [alt]="product.title">
+  <div class="card-body">
+    <h5 class="card-title" [routerLink]="[product.id]">{{ product.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      {{ product.price | currency:'EUR' }}</h6>
+    <p class="card-text">{{ product.description }}</p>
+
+    <div class="d-flex justify-content-around">
+      <button (click)="onClick(product)" class="btn btn-primary">Add to cart</button>
+      <input type="number" min="0" class="form-control col-4" id="qty" aria-describedby="Quantity"
+        [formControl]="quantity">
+    </div>
+  </div>
+</div>

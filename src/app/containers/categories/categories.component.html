@@ -1,0 +1,5 @@
+<div *ngIf="(categories | async) as categories">
+    <ul>
+        <li *ngFor="let category of categories"><app-category [category]="category"></app-category></li>
+    </ul>
+</div>
